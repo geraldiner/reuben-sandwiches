@@ -1,5 +1,7 @@
 ---
-import "../styles/global.css";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -8,10 +10,13 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="/src/styles/global.css" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>Reuben Sandwiches in Raleigh</title>
   </head>
-  <body>
+  <body class="flex min-h-dvh w-full flex-col items-center justify-between">
+    <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
