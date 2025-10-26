@@ -34,7 +34,9 @@ const priceFormatter = new Intl.NumberFormat('en-US', {
           <h3>{item}</h3>
           <div class="text-base">w/ {sides}</div>
         </div>
-        <div class="text-xl font-medium">{priceFormatter.format(price)}</div>
+        <div class="text-base font-medium md:text-xl">
+          {priceFormatter.format(price)}
+        </div>
       </div>
     </div>
     <hr />
