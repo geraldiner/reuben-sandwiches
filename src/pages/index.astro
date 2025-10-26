@@ -1,8 +1,44 @@
 ---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
 import ItemCard from '../components/ItemCard.astro';
 import Layout from '../layouts/Layout.astro';
+
+type ReubenEntry = CollectionEntry<'reubens'>;
+
+let reubens = await getCollection('reubens');
+reubens.sort(
+  (a: ReubenEntry, b: ReubenEntry) =>
+    b.data.stars - a.data.stars ||
+    a.data.restaurant.localeCompare(b.data.restaurant)
+);
 ---
 
 <Layout>
-  <main class="m-auto max-w-7xl flex-1 px-20 py-10"><ItemCard /></main>
+  <main
+    class="m-auto grid max-w-7xl flex-1 grid-cols-1 gap-8 px-20 py-10 md:grid-cols-2"
+  >
+    {
+      reubens.map(async (item: ReubenEntry) => {
+        const { Content } = await render(item);
+        return (
+          <ItemCard
+            restaurant={item.data.restaurant}
+            address={item.data.address}
+            item={item.data.item}
+            stars={item.data.stars}
+            imagePrimary={item.data.imagePrimary}
+            imageLength={item.data.imageLength}
+            imagePackage={item.data.imagePackage}
+            website={item.data.website}
+            price={item.data.price}
+            sides={item.data.sides}
+            closed={item.data.closed}
+          >
+            <Content />
+          </ItemCard>
+        );
+      })
+    }
+  </main>
 </Layout>
