@@ -14,19 +14,19 @@
 }
 
 body {
-  @apply bg-napkin text-lg;
+  @apply bg-napkin text-base md:text-lg;
 }
 
 h1 {
-  @apply text-cornedbeef text-5xl font-bold;
+  @apply text-cornedbeef text-3xl font-bold md:text-5xl;
 }
 
 h2 {
-  @apply text-cornedbeef text-4xl font-bold;
+  @apply text-cornedbeef text-2xl font-bold md:text-4xl;
 }
 
 h3 {
-  @apply text-bread text-2xl font-semibold;
+  @apply text-bread text-lg font-semibold md:text-2xl;
 }
 
 a {
