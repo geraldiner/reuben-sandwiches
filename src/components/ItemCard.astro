@@ -1,40 +1,45 @@
 ---
 import { Image } from 'astro:assets';
 import placeholderReuben from '../assets/placeholder.jpeg';
+
+const { restaurant, item, sides, stars, imageThumbnail, website, price } =
+  Astro.props;
+
+const priceFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 2,
+});
 ---
 
 <div class="w-full rounded-2xl">
   <!-- Image Thumbnail -->
   <Image
     class="w-full rounded-t-2xl"
-    src={placeholderReuben}
-    alt="Stock image of Reuben Sandwich"
+    src={imageThumbnail || placeholderReuben}
+    alt={restaurant
+      ? `Reuben sandwich at ${restaurant}`
+      : 'Placeholder image of reuben sandwich'}
   />
   <!-- Rating -->
-  <div class="bg-cabbage px-10 py-8 text-4xl">🥪🥪🥪🥪✖</div>
+  <div class="bg-cabbage px-10 py-8 text-4xl">
+    {'🥪'.repeat(stars)}{'✖'.repeat(5 - stars)}
+  </div>
   <!-- Card Details -->
   <div class="rounded-b-2xl bg-white px-10 py-8">
     <div class="flex flex-col gap-4">
-      <h2><a href="/">Restaurant Name ↗</a></h2>
+      <h2><a href={website} target="_blank">{restaurant} ↗</a></h2>
       <div class="flex justify-between gap-5">
         <div class="flex flex-1 flex-col gap-1">
-          <h3>Sandwich Name</h3>
-          <div class="text-base">w/ sides</div>
+          <h3>{item}</h3>
+          <div class="text-base">w/ {sides}</div>
         </div>
-        <div class="text-xl font-medium">$XX.XX</div>
+        <div class="text-xl font-medium">{priceFormatter.format(price)}</div>
       </div>
     </div>
     <hr />
     <div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, itaque?
-      </p>
-      <p>
-        Vero et ipsam autem magni! Fugit quos minus debitis aspernatur aliquid.
-      </p>
-      <p>
-        Natus assumenda, repudiandae, eveniet harum atque culpa modi quibusdam?
-      </p>
+      <slot />
     </div>
   </div>
 </div>
