@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import placeholderReuben from '../assets/placeholder.jpeg';
+---
+
+<div class="w-full rounded-2xl">
+  <!-- Image Thumbnail -->
+  <Image
+    class="w-full rounded-t-2xl"
+    src={placeholderReuben}
+    alt="Stock image of Reuben Sandwich"
+  />
+  <!-- Rating -->
+  <div class="bg-cabbage px-10 py-8 text-4xl">🥪🥪🥪🥪✖</div>
+  <!-- Card Details -->
+  <div class="rounded-b-2xl bg-white px-10 py-8">
+    <div class="flex flex-col gap-4">
+      <h2><a href="/">Restaurant Name ↗</a></h2>
+      <div class="flex justify-between gap-5">
+        <div class="flex flex-1 flex-col gap-1">
+          <h3>Sandwich Name</h3>
+          <div class="text-base">w/ sides</div>
+        </div>
+        <div class="text-xl font-medium">$XX.XX</div>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, itaque?
+      </p>
+      <p>
+        Vero et ipsam autem magni! Fugit quos minus debitis aspernatur aliquid.
+      </p>
+      <p>
+        Natus assumenda, repudiandae, eveniet harum atque culpa modi quibusdam?
+      </p>
+    </div>
+  </div>
+</div>

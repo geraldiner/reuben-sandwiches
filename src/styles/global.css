@@ -1,1 +1,64 @@
 @import 'tailwindcss';
+
+@theme {
+  --default-font-family: 'Inter', sans-serif;
+
+  --color-*: initial;
+  --color-cornedbeef: #b44b4b;
+  --color-sauerkraut: #efa472;
+  --color-cabbage: #7bb662;
+  --color-napkin: #f2f0e6;
+  --color-bread: #5c4033;
+  --color-white: #f8f8f8;
+  --color-black: #2b2b2b;
+}
+
+body {
+  @apply bg-napkin text-lg;
+}
+
+h1 {
+  @apply text-cornedbeef text-5xl font-bold;
+}
+
+h2 {
+  @apply text-cornedbeef text-4xl font-bold;
+}
+
+h3 {
+  @apply text-bread text-2xl font-semibold;
+}
+
+a {
+  @apply font-medium underline;
+}
+
+a:hover {
+  @apply underline-offset-2;
+}
+
+a.primary {
+  @apply text-cabbage;
+}
+
+a.secondary {
+  @apply text-sauerkraut;
+}
+
+h1 a,
+h2 a {
+  @apply font-bold no-underline;
+}
+
+h1 a:hover,
+h2 a:hover {
+  @apply underline;
+}
+
+p {
+  @apply pb-2;
+}
+
+hr {
+  @apply my-4;
+}
