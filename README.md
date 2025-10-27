@@ -131,3 +131,21 @@ I also had a bit of a major headache setting up Vitest, and only discovered late
 I eventually did what I should've done in the first place and Consulted. The. Docs!
 
 I will also say that I'm sure prompt-engineering has its own skillset, and I'm just not there yet. I will keep trying though. I recognize AI as another powerful tool in the Software Engineer's toolkit.
+
+## 🚀 Other Projects
+
+Check out other stuff I've worked on:
+
+**Reuben Sandwiches**: https://github.com/geraldiner/reuben-sandwiches
+
+**Nook Music**: https://github.com/geraldiner/nook-music
+
+**Animal Crossing API**: https://github.com/geraldiner/ac-api
+
+## 🤙 Let's connect
+
+- Website: [geraldiner.com](https://geraldiner.com)
+- Resume: [Geraldine R](https://geraldiner.com/GeraldineRagsac_Resume.pdf)
+- LinkedIn: [in/geraldiner](https://linkedin.com/in/geraldiner)
+- Sometimes I write: [@geraldiner](https://geraldiner.hashnode.dev)
+- For crochet work: [@geraldinedesu](https://instagram.com/geraldinedesu)
