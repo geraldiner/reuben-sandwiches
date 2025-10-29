@@ -8,4 +8,6 @@ imageThumbnail: ''
 price: 12.95
 ---
 
-A pretty close second.
+A pretty close second! I believe this is where I had my first Reuben sandwich and it didn't disappoint. I love that they let you have it with potato chips because that's my preferred side.
+
+And really, the _only_ reason I put this second is because I've noticed they haven't been consistent with the quality between the times I've been there.
