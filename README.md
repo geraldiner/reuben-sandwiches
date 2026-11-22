@@ -131,8 +131,6 @@ I also had a bit of a major headache setting up Vitest, and only discovered late
 I eventually did what I should've done in the first place and Consulted. The. Docs!
 
 I will also say that I'm sure prompt-engineering has its own skillset, and I'm just not there yet. I will keep trying though. I recognize AI as another powerful tool in the Software Engineer's toolkit.
-
-
 ## 🚀 Other Projects
 
 Check out other stuff I've worked on:
